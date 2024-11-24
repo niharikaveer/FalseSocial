@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container Styles */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url(bg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .container {
+            display: flex;
+            margin-left: 10rem;
+            border-radius: 8px;
+            backdrop-filter: blur(7px);
+            background-color: rgb(0, 0, 0);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 25vw;
+            height: 60vh;
+            --border-size: 3px;
+            --border-angle: -3turn;
+            border-radius: 20px;
+            background-image: conic-gradient(from var(--border-angle), #213, #112 50%, #213), 
+                            conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+            background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)), cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            animation: bg-spin 3s linear infinite;
+            justify-content: center;
+        }
+
+        /* Login Form Section */
+        .login-form {
+            padding: 1.5rem;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 1rem;   
+            font-size: 2em;
+            color: #fff;
+            padding-top: 1.5rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.75rem;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        button {
+            margin-top: 2rem;
+            width: 100%;
+            height: 40px;
+            background: #000;
+            border: #fff;
+            outline: auto;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 1 em;
+            color:#fff ;
+            font-weight: 500;
+        }
+
+        button::before {
+            content: "";
+            top: 0;
+            left: 0;
+            width:  100%;
+            height: 100%;
+            background: linear-gradient(120 deg,transparent, #00fffc,transparent);
+            transform: translateX(-100%);
+            transition: 0.6s;
+            position:absolute;
+            }
+        button:hover {
+            background: transparent;
+            box-shadow: 0 0 20px 5px #00fffc
+        }
+
+        .error {
+            color: red;
+            margin: 10px 0;
+        }
+
+        /* Illustration Section */
+        .illustration {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .illustration img {
+            width: 90%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Login Form Section -->
+        <div class="login-form" action="/Home Page/home.html">
+            <h2>Login</h2>
+            <form id="loginForm" action="">
+                <input type="text" id="username" placeholder="Username" required />
+                <input type="password" id="password" placeholder="Password" required />
+                <a href="/Home Page/home.html"><button type="submit">Login</button></a>
+            </form>
+            <div id="error" class="error"></div>
+        </div>
+        
+        <!-- Illustration Section -->
+       
+    </div>
+    <div class="illustration">
+        <img src="logo.jpg" alt="Login Illustration">
+    </div>
+
+    <script>
+        const form = document.getElementById('loginForm');
+        const errorDiv = document.getElementById('error');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('http://localhost:5000/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password }),
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    alert("Login successful!");
+                    console.log("Token:", data.token);
+                    errorDiv.textContent = '';
+
+                    window.location.href = "/Home Page/home.html"; 
+                }
+                 else {
+                    errorDiv.textContent = data.error || "Login failed";
+                }
+            } catch (error) {
+                errorDiv.textContent = "An error occurred. Please try again.";
+            }
+        });
+    </script>
+</body>
+</html>

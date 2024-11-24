@@ -1,0 +1,318 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Dark Mode Variables */
+:root {
+    --bg-color: #000;
+    --text-color: #e0e0e0;
+    --navbar-color: #111;
+    --card-bg-color: #222;
+    --border-color: #333;
+    --icon-color: #e0e0e0;
+    --accent-color: #ff5252;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Navbar */
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--navbar-color);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 60px;
+}
+
+.nav .logo {
+    display: flex; /* Make the logo a flex container */
+    align-items: center;
+    height: 50px;
+}
+
+.nav .logo_name {
+    margin-left: 10px;
+    font-size: 1rem;
+    color: white;
+}
+
+.nav input[type="text"] {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    margin-left: auto;
+}
+
+/* Main Layout */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+/* Feed Section */
+.feed {
+    flex: 2;
+}
+.user-info .profile_pic{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+
+.post {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-header, .post-footer {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post-header img, .post-content img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.post-header .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post-content img {
+    width: 100%;
+    height: 300px; /* Rectangular dimensions */
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+    border-radius: 0;
+}
+
+/* Description under post */
+.post-description {
+    padding: 10px;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    background-color: var(--card-bg-color);
+}
+
+.post-footer .actions {
+    display: flex;
+    gap: 20px;
+    font-size: 1.2rem;
+}
+/* Styles for the liked heart icon */
+.fa-heart.liked {
+    color: red; /* Change the border color of the heart */
+}
+
+/* Optionally add smooth transition for fill color */
+.fa-heart {
+    transition: fill 0.3s ease;
+}
+
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    position: sticky;
+    top: 70px;
+}
+
+.sidebar .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.sidebar img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+/* Suggestions */
+.sidebar .suggestions {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px; /* Added margin between suggestions and recommended pages */
+}
+
+.sidebar .suggestion {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sidebar .suggestion img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.sidebar .follow-btn{
+    margin-left: auto;
+}
+
+.follow-btn {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/* recommendations */
+.recommended-pages {
+    background-color: var(--card-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.recommended-pages h4 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.page {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+.recommended_user{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+ 
+.page:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.page-name {
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.page .description {
+    color: gray;
+    font-size: 0.9rem;
+    flex: 1;
+    margin-top: 10px;
+    text-align: center;
+}
+/*profile*/
+.my_profile {
+    background-color: var(--card-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+.pic_text{
+    display: flex;
+    align-items: center;
+}
+.pic_text .pic{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.my_profile .icon{
+    margin-left: auto;
+}
+/* Messages */
+.messages {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+}
+.msg_heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.message {
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.msg {
+    display: flex; /* Align avatar and text container horizontally */
+    align-items: flex-start; /* Align top edges */
+    gap: 10px; /* Space between avatar and text */
+}
+
+.msg img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Circular avatar */
+}
+
+.message-text-container {
+    display: flex;
+    flex-direction: column; /* Stack message text and time vertically */
+    width: 100%; /* Ensure the container spans full width */
+}
+
+.message-text {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 5px; /* Space between text and time */
+}
+
+.time {
+    font-size: 0.8rem;
+    color: gray;
+    text-align: right; /* Align the time to the right */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>False Social Forum</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="../Home Page/home.html"><img src="logo.png" alt="False Social Forum" class="logo"></a>
+      <h1>Forum</h1>
+      <button id="new-post-btn">Create New Post</button>
+    </header>
+
+    <div id="new-post-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Create a New Post</h2>
+        <form id="new-post-form">
+          <input type="text" id="post-title" placeholder="Post Title">
+          <textarea id="post-content" placeholder="Post Content"></textarea>
+          <button type="submit">Post</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="forum-posts">
+      <div class="post">
+        <div class="post-header">
+          <img src="user1.jpg" alt="User Avatar" class="avatar">
+          <h3>User 1</h3>
+          <span class="post-date">November 15, 2024</span>
+        </div>
+        <div class="post-content">
+          <h4>Dune bashing weekend!</h4>
+          <p>Exciting racing and challenges on weekend dune bash.</p>
+          <img src="user1-post.jpg" alt="User 1 Post" class="post-image">
+        </div>
+        <div class="post-actions">
+          <button>👍 Like</button>
+          <button>💬 Comment</button>
+          <button>🔗 Share</button>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-header">
+          <img src="user2.jpg" alt="User Avatar" class="avatar">
+          <h3>User 2</h3>
+          <span class="post-date">November 14, 2024</span>
+        </div>
+        <div class="post-content">
+          <p>Beautiful sunset at Willow springs raceway.</p>
+          <img src="user2-post.png" alt="User 2 Post" class="post-image">
+        </div>
+        <div class="post-actions">
+          <button>👍 Like</button>
+          <button>💬 Comment</button>
+          <button>🔗 Share</button>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-header">
+          <img src="user3.jpg" alt="User Avatar" class="avatar">
+          <h3>User 3</h3>
+          <span class="post-date">November 13, 2024</span>
+        </div>
+        <div class="post-content">
+          <h4>Exploring the great outdoors</h4>
+          <p>Today I went on a hillclimb drive and saw the most beautiful views.</p>
+          <img src="user3-post.jpg" alt="User 3 Post" class="post-image">
+        </div>
+        <div class="post-actions">
+          <button>👍 Like</button>
+          <button>💬 Comment</button>
+          <button>🔗 Share</button>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-header">
+          <img src="user4.jpg" alt="User Avatar" class="avatar">
+          <h3>User 4</h3>
+          <span class="post-date">November 12, 2024</span>
+        </div>
+        <div class="post-content">
+          <h4>Tried a new activity today!</h4>
+          <p>An amazing day out with the chaps!</p>
+          <img src="user4-post.jpg" alt="User 4 Post" class="post-image">
+        </div>
+        <div class="post-actions">
+          <button>👍 Like</button>
+          <button>💬 Comment</button>
+          <button>🔗 Share</button>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-header">
+          <img src="user5.jpg" alt="User Avatar" class="avatar">
+          <h3>User 5</h3>
+          <span class="post-date">November 11, 2024</span>
+        </div>
+        <div class="post-content">
+          <p>Sliding through a tricky spot!</p>
+          <img src="user5-post.jpg" alt="User 5 Post" class="post-image">
+        </div>
+        <div class="post-actions">
+          <button>👍 Like</button>
+          <button>💬 Comment</button>
+          <button>🔗 Share</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
