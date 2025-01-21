@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FalseSocial - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="nav">
+        <img src="Logo.png" class="logo">
+        <span class="logo_name">FALSE SOCIAL</span>
+        <input type="text" placeholder="Search">
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Feed Section -->
+        <div class="feed">
+            <!-- Multiple Posts -->
+            <div class="post">
+                <div class="post-header">
+                    <div class="user-info">
+                        <img src="profile 1.jpg" alt="User Avatar" class="profile_pic">
+                        <span class="username">calra_doe</span>
+                    </div>
+                    <span>...</span>
+                </div>
+                <div class="post-content">
+                    <img src="post1.jpg" alt="Post Image">
+                </div>
+                <div class="post-description">
+                    <b>calra_doe</b>  This is a beautiful mountain view during sunrise. Nature at its finest!
+                </div>
+                <div class="post-footer">
+                    <div class="actions">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-regular fa-comment"></i>
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </div>
+                    <span>100 likes</span>
+                </div>
+            </div>
+
+            <!-- Another Post -->
+            <div class="post">
+                <div class="post-header">
+                    <div class="user-info">
+                        <img src="profile 2.jpg" alt="User Avatar" class="profile_pic">
+                        <span class="username">jane_smith</span>
+                    </div>
+                    <span>...</span>
+                </div>
+                <div class="post-content">
+                    <img src="post2.jpg" alt="Post Image">
+                </div>
+                <div class="post-description">
+                    <b>jane_smith</b> The sound of the waves is my favorite melody.
+                </div>
+                <div class="post-footer">
+                    <div class="actions">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-regular fa-comment"></i>
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </div>
+                    <span>150 likes</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar: Suggestions and Messages -->
+        <div class="sidebar">
+            <!-- User Suggestions -->
+            <div class="suggestions">
+                <div class="suggestion">
+                    <img src="Profile image.jpg" alt="User Avatar">
+                    <span class="username">user 1</span>
+                    <button class="follow-btn">Follow</button>
+                </div>
+                <div class="suggestion">
+                    <img src="Profile image.jpg" alt="User Avatar">
+                    <span class="username">user 2</span>
+                    <button class="follow-btn">Follow</button>
+                </div>
+            </div>
+
+            <!-- Recommended Pages -->
+            <div class="recommended-pages">
+                <h4>Recommended Pages</h4>
+                <div class="page">
+                    <div class="recommended_user">
+                    <span class="page-name">Nature Lovers</span>
+                    <button class="follow-btn">Follow</button>
+                    </div>
+                    <span class="description">A community for nature enthusiasts</span>
+                </div>
+                <div class="page">
+                    <div class="recommended_user">
+                     <span class="page-name">Tech Innovations</span>
+                     <button class="follow-btn">Follow</button>
+                    </div>
+                    <span class="description">Stay up-to-date with the latest tech news</span>
+                </div>
+            </div>
+            <!-- Profile Page -->
+            <div class="my_profile">
+                <div class="pic_text">
+                    <img src="Profile image.jpg" alt="my_profile" class="pic">
+                    <span>My Profile</span>
+                </div>
+                <div class="icon"><a href="../profile-page/index.html"><i class="fa-solid fa-chevron-right"></i></a></div>
+            </div>
+        </div>
+
+        <!-- Messages Section -->
+        <div class="messages">
+            <div class="msg_heading">
+                <h4>Messages</h4>
+                <a href="../Chats/Chats/chats.html"><i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+            <div class="message">
+                <div class="msg">
+                    <img src="Profile image.jpg" alt="User Avatar">
+                    <div class="message-text-container">
+                        <div class="message-text">Hey, how's everything going?</div>
+                        <span class="time">2m ago</span>
+                    </div>
+                </div>
+            </div>
+            <div class="message">
+                <div class="msg">
+                    <img src="Profile image.jpg" alt="User Avatar">
+                    <div class="message-text-container">
+                        <div class="message-text">Have you checked out the new movie?</div>
+                        <span class="time">1h ago</span>
+                    </div>
+                </div>
+            </div>
+            <div class="message">
+                <div class="msg">
+                    <img src="Profile image.jpg" alt="User Avatar">
+                    <div class="message-text-container">
+                        <div class="message-text">Let's meet up this weekend!</div>
+                        <span class="time">5h ago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
